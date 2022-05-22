@@ -1,0 +1,24 @@
+[package]
+name = "bpf-program-template"
+version = "0.1.0"
+edition = "2018"
+license = "WTFPL"
+publish = false
+
+[dependencies]
+arrayref = "0.3.6"
+thiserror = "1.0.24"
+solana-program = "1.8.1"
+switchboard-program = "0.1.52" # requires `rustc --version` >= 1.51.0
+
+[features]
+no-entrypoint = []
+
+[dev-dependencies]
+solana-program-test = "1.8.1"
+solana-sdk = "=1.8.1"
+solana-validator = "1.6.8"
+
+[lib]
+name = "sollotto"
+crate-type = ["cdylib", "lib"]
